@@ -8,46 +8,102 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-		<title>Niina Pollari | Author Archive</title>
+		<title>Niina Pollari | Poet, Translator, Writer</title>
 	</head>
 	<body>
 		<main>
-			<header>
-				<h1>Niina Pollari</h1>
-				<p class="bio">Writer & Poet. Author of <em>Path of Totality</em>.</p>
-			</header>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/books">Books</a></li>
+            <li><a href="/other-writing">Other Writing</a></li>
+            <li><a href="/newsletter">Newsletter</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
 
-			<nav>
-				<ul>
-					<li><a href="https://yoursubstack.substack.com">Substack</a></li>
-					<li><a href="#books">Books</a></li>
-					<li><a href="#projects">Popsickle Archive (2010–2016)</a></li>
-				</ul>
-			</nav>
+    <section class="hero">
+        <div class="book-feature">
+            <div class="book-info">
+                <h1>Path of Totality</h1>
+                <p class="publisher">Soft Skull Press, 2022</p>
+                
+                <blockquote class="praise">
+                    "Mysteriously empowering, as though it offered proof that the human mind is equal to great tragedy."
+                    <cite>— Elisa Gabbert, New York Times</cite>
+                </blockquote>
 
-			<section id="books">
-				<h2>Selected Books</h2>
-				<div class="book-item">
-					<strong>Path of Totality</strong> (2022) — Soft Skull Press
-				</div>
-				</section>
-		</main>
+                <div class="buy-links">
+                    <a href="https://softskull.com/dd-product/path-of-totality/" class="button primary">Buy from Publisher</a>
+                    <a href="https://bookshop.org" class="button secondary">Bookshop.org</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 		<style>
-			:root { font-family: 'Libre Baskerville', serif; background-color: #fdfdfd; color: #1a1a1a; }
-			body { margin: 0; display: flex; justify-content: center; }
-			main { padding: 5rem 1.5rem; max-width: 650px; width: 100%; }
-			
-			header { margin-bottom: 3rem; border-bottom: 1px solid #eee; padding-bottom: 2rem; }
-			h1 { font-size: 2.8rem; margin: 0; font-weight: normal; letter-spacing: -1px; }
-			.bio { font-style: italic; font-size: 1.2rem; color: #555; margin-top: 0.5rem; }
+    :root { 
+        font-family: 'Libre Baskerville', serif; 
+        background-color: #fdfdfd; 
+        color: #1a1a1a; 
+    }
 
-			nav ul { list-style: none; padding: 0; display: flex; gap: 1.5rem; margin-bottom: 4rem; }
-			nav a { font-family: 'Inter', sans-serif; text-decoration: none; color: #000; font-weight: bold; border-bottom: 1px solid transparent; transition: border 0.2s; }
-			nav a:hover { border-bottom: 1px solid #000; }
+    /* Navigation */
+    .top-nav {
+        padding: 2rem 0;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 4rem;
+    }
+    .top-nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+    .top-nav a { text-decoration: none; color: #666; }
+    .top-nav a:hover { color: #000; }
 
-			h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #888; margin-bottom: 1.5rem; }
-			.book-item { font-size: 1.1rem; }
-		</style>
+    /* Hero Section */
+    main { max-width: 900px; margin: auto; padding: 0 2rem; }
+    
+    .book-feature {
+        display: grid;
+        grid-template-columns: 1fr; /* We can add an image column later! */
+        gap: 3rem;
+        align-items: center;
+    }
+
+    h1 { font-size: 3.5rem; margin: 0; font-weight: normal; }
+    .publisher { font-style: italic; color: #888; margin-bottom: 2rem; }
+
+    /* Praise/Quotes */
+    .praise {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        margin: 2rem 0;
+        border-left: 3px solid #000;
+        padding-left: 2rem;
+    }
+    cite { display: block; font-size: 1rem; margin-top: 1rem; color: #666; }
+
+    /* Buttons */
+    .buy-links { display: flex; gap: 1rem; margin-top: 3rem; }
+    .button {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+    .primary { background: #000; color: #fff; }
+    .secondary { border: 1px solid #000; color: #000; }
+</style>
 	</body>
 </html>
