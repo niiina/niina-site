@@ -1,17 +1,53 @@
 ---
-
+// This is empty because we aren't using any external "tools" yet!
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+		<title>Niina Pollari | Author Archive</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<main>
+			<header>
+				<h1>Niina Pollari</h1>
+				<p class="bio">Writer & Poet. Author of <em>Path of Totality</em>.</p>
+			</header>
+
+			<nav>
+				<ul>
+					<li><a href="https://yoursubstack.substack.com">Substack</a></li>
+					<li><a href="#books">Books</a></li>
+					<li><a href="#projects">Popsickle Archive (2010–2016)</a></li>
+				</ul>
+			</nav>
+
+			<section id="books">
+				<h2>Selected Books</h2>
+				<div class="book-item">
+					<strong>Path of Totality</strong> (2022) — Soft Skull Press
+				</div>
+				</section>
+		</main>
+
+		<style>
+			:root { font-family: 'Libre Baskerville', serif; background-color: #fdfdfd; color: #1a1a1a; }
+			body { margin: 0; display: flex; justify-content: center; }
+			main { padding: 5rem 1.5rem; max-width: 650px; width: 100%; }
+			
+			header { margin-bottom: 3rem; border-bottom: 1px solid #eee; padding-bottom: 2rem; }
+			h1 { font-size: 2.8rem; margin: 0; font-weight: normal; letter-spacing: -1px; }
+			.bio { font-style: italic; font-size: 1.2rem; color: #555; margin-top: 0.5rem; }
+
+			nav ul { list-style: none; padding: 0; display: flex; gap: 1.5rem; margin-bottom: 4rem; }
+			nav a { font-family: 'Inter', sans-serif; text-decoration: none; color: #000; font-weight: bold; border-bottom: 1px solid transparent; transition: border 0.2s; }
+			nav a:hover { border-bottom: 1px solid #000; }
+
+			h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #888; margin-bottom: 1.5rem; }
+			.book-item { font-size: 1.1rem; }
+		</style>
 	</body>
 </html>
