@@ -29,155 +29,63 @@
 
 			<section class="content-page">
 				<h2>About</h2>
-				<div class="bio-text">
-					<p>Niina Pollari is the author of two poetry collections, Path of Totality (Soft Skull 2022) and Dead Horse (Birds, LLC 2015). She is also the translator, from the Finnish, of Tytti Heikkinen's selected collection, <i>The Warmth of the Taxidermied Animal</i>. Her next collection, <i>Risk Tolerance</i>, will be out from Autofocus Books in early 2027. She is represented by Monika Ostrowska of Triangle House. </p>
-                    <p> Contact Niina at: <b>niina dot pollari at gmail dot com.</b></p>
-                    <img src="/niina1.jpg" alt="Niina Pollari" />
-                    Photo by: Jack Sorokin
+				<div class="about-grid">
+					<div class="profile-photo">
+						<img src="/headshot.jpg" alt="Niina Pollari" />
+					</div>
+					<div class="bio-text">
+						<p>Niina Pollari is the author of <em>Path of Totality</em> (Soft Skull Press, 2022) and two other books. Her work has appeared in various publications...</p>
+						<p>Add the rest of your bio here!</p>
+					</div>
 				</div>
 			</section>
 		</main>
 
 		<style>
-  * { box-sizing: border-box; }
-    
-    body { 
-        margin: 0; 
-        padding: 0; 
-        background-color: #fdfdfd; 
-        color: #1a1a1a;
-        font-family: 'Libre Baskerville', serif;
-        -webkit-font-smoothing: antialiased;
-    }
+			/* 1. GLOBAL STYLES */
+			* { box-sizing: border-box; }
+			body { 
+				margin: 0; 
+				padding: 0; 
+				background-color: #fdfdfd; 
+				color: #1a1a1a;
+				font-family: 'Libre Baskerville', serif;
+			}
+			main { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-    main { 
-        max-width: 1100px; 
-        margin: 0 auto; 
-        padding: 0 2rem; 
-    }
+			/* 2. HEADER & NAV */
+			.site-header { text-align: center; padding: 5rem 0 2.5rem; }
+			.site-header h1 { font-size: 3.2rem; letter-spacing: 0.3rem; font-weight: normal; margin: 0; }
+			
+			.top-nav { border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 5rem; padding: 1.2rem 0; }
+			.top-nav ul { list-style: none; display: flex; justify-content: center; gap: 3rem; padding: 0; margin: 0; }
+			.top-nav a { text-decoration: none; color: #777; font-family: 'Inter', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; }
+			.top-nav a:hover { color: #000; }
 
-    /* 2. HEADER & NAVIGATION */
-    .site-header { 
-        text-align: center; 
-        padding: 5rem 0 2.5rem; 
-    }
-    
-    .site-header h1 { 
-        font-size: 3.2rem; 
-        letter-spacing: 0.3rem; 
-        font-weight: normal; 
-        margin: 0;
-    }
+			/* 3. THE ABOUT GRID & PHOTO RESIZING */
+			.content-page h2 { font-weight: normal; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 3rem; }
+			
+			.about-grid {
+				display: grid;
+				grid-template-columns: 350px 1fr; /* This keeps the photo at 350px */
+				gap: 4rem;
+				align-items: start;
+				margin-bottom: 5rem;
+			}
 
-    .top-nav { 
-        border-top: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        margin-bottom: 5rem;
-        padding: 1.2rem 0;
-    }
-    
-    .top-nav ul { 
-        list-style: none; 
-        display: flex; 
-        justify-content: center; 
-        gap: 3rem; 
-        padding: 0;
-        margin: 0;
-    }
-    
-    .top-nav a { 
-        text-decoration: none; 
-        color: #777; 
-        font-family: 'Inter', sans-serif;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-    }
-    
-    .top-nav a:hover { color: #000; }
+			.profile-photo img {
+				width: 100%; /* Fills the 350px column exactly */
+				height: auto;
+				box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+			}
 
-    /* 3. THE BOOK GRID */
-    .book-grid {
-        display: grid;
-        grid-template-columns: 320px 1fr; 
-        gap: 5rem;
-        align-items: center;
-        margin-bottom: 8rem;
-    }
+			.bio-text { line-height: 1.8; font-size: 1.1rem; }
 
-    .book-visual img {
-        width: 100%;
-        height: auto;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.12); 
-    }
-
-    .book-title { 
-        font-size: 2.8rem; 
-        margin: 0 0 0.5rem; 
-        font-weight: normal; 
-    }
-    
-    .publisher { 
-        font-style: italic; 
-        color: #999; 
-        margin-bottom: 2.5rem; 
-        font-size: 1.1rem;
-    }
-
-    .praise {
-        font-size: 1.3rem;
-        line-height: 1.8;
-        margin: 2.5rem 0;
-        padding-left: 2rem;
-        border-left: 1px solid #ccc;
-    }
-    
-    cite { 
-        display: block; 
-        font-size: 0.95rem; 
-        margin-top: 1.2rem; 
-        color: #777; 
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        text-transform: uppercase;
-    }
-
-    /* 4. BUTTONS */
-    .buy-links { display: flex; gap: 1.5rem; }
-    
-    .btn {
-        display: inline-block;
-        padding: 1rem 1.8rem;
-        text-decoration: none;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-    }
-    
-    .primary { background: #1a1a1a; color: #fff; }
-    .secondary { border: 1px solid #1a1a1a; color: #1a1a1a; }
-
-    /* 5. MOBILE VIEW */
-    @media (max-width: 850px) {
-        .book-grid { grid-template-columns: 1fr; text-align: center; }
-        .book-visual img { max-width: 280px; margin: 0 auto; }
-        .top-nav ul { flex-direction: column; align-items: center; gap: 1.5rem; }
-    }
-            .content-page {
-                max-width: 700px;
-                margin: 0 auto 5rem;
-                line-height: 1.8;
-            }
-            .content-page h2 {
-                font-weight: normal;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                border-bottom: 1px solid #eee;
-                padding-bottom: 1rem;
-                margin-bottom: 2rem;
-            }
+			/* 4. MOBILE STYLES */
+			@media (max-width: 850px) {
+				.about-grid { grid-template-columns: 1fr; text-align: center; }
+				.profile-photo img { max-width: 280px; margin: 0 auto 2rem; }
+			}
 		</style>
 	</body>
 </html>
