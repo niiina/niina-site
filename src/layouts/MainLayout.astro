@@ -32,6 +32,69 @@ const { title } = Astro.props;
 		</main>
 
 		<style is:global>
+            /* HOMEPAGE SPECIFIC STYLES */
+    .book-grid {
+        display: grid;
+        grid-template-columns: 320px 1fr; 
+        gap: 5rem;
+        align-items: center;
+        margin-bottom: 8rem;
+        margin-top: 2rem;
+    }
+
+    .book-visual img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.12); 
+    }
+
+    .book-title { 
+        font-size: 2.8rem; 
+        margin: 0 0 0.5rem; 
+        font-weight: normal; 
+    }
+    
+    .publisher { 
+        font-style: italic; 
+        color: #999; 
+        margin-bottom: 2.5rem; 
+        font-size: 1.1rem;
+    }
+
+    .praise {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        margin: 2.5rem 0;
+        padding-left: 2rem;
+        border-left: 1px solid #ccc;
+    }
+    
+    cite { 
+        display: block; 
+        font-size: 0.95rem; 
+        margin-top: 1.2rem; 
+        color: #777; 
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        text-transform: uppercase;
+    }
+
+    /* BUTTONS */
+    .buy-links { display: flex; gap: 1.5rem; }
+    
+    .btn {
+        display: inline-block;
+        padding: 1rem 1.8rem;
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    
+    .primary { background: #1a1a1a; color: #fff; }
+    .secondary { border: 1px solid #1a1a1a; color: #1a1a1a; }
 			/* Global styles that apply to every page */
 			* { box-sizing: border-box; }
 			body { 
